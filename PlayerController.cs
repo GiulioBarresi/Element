@@ -81,18 +81,18 @@ public class PlayerController : MonoBehaviour
                     rb.AddForce(direction * acceleration * Time.fixedDeltaTime);
                 }*/
 
-                playerAn.SetBool("is_walking", true); //aggiunta elisa
+                playerAn.SetBool("is_walking", true);
             }
             else
             {
-                playerAn.SetBool("is_walking", false); //aggiunta elisa
+                playerAn.SetBool("is_walking", false);
             }
 
             //rb.AddForce(direction * speed);
         }
         else
         {
-            playerAn.SetBool("is_walking", false); //aggiunta elisa
+            playerAn.SetBool("is_walking", false);
         }
 
         Collider[] colliders = Physics.OverlapBox(groudPosition.position, new Vector3(rangeGroundCheck, heightGroundCheck, rangeGroundCheck),Quaternion.identity,groundcheckmask);
